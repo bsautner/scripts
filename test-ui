@@ -1,0 +1,30 @@
+#!/bin/bash
+export uuid=$(uuidgen)
+export P="/tmp/$uuid"
+export OUT="$P/img.avd"
+echo "Starting up workspace $P"
+rm -fR "$P"
+mkdir -v "$P"
+#sudo mount -t tmpfs -o rw,size=12G tmpfs "$P"
+cd "$P" || exit
+sudo chmod a+rw "$P"
+echo "creating emulator"
+sdkmanager --install "system-images;android-29;default;x86"
+//echo "no" | avdmanager --verbose create avd -c 1000M --force --name "$uuid" --device "pixel_xl" --package "system-images;android-29;default;x86" --tag "default" -p "$OUT"
+$ANDROID_HOME/emulator/emulator @SanityAVD &
+git fetch
+git clone git@github.comcast.com:DigitalHome/DH-Android.git
+cd DH-Android || exit
+./gradlew -PspoonAnnotation=SanityTest -PtestTitle="Espresso Sanity Test Report" spoonComcastDebugAndroidTest
+echo "unmounting file system"
+cd ~ || exit
+adb emu kill
+avdmanager delete avd -n "$uuid"
+mkdir "/tmp/report-$uuid"
+cp -fR "/tmp/$uuid/DH-Android/app/build/spoonTests" "/tmp/report-$uuid/"
+sleep 10
+#sudo umount -f -l "$P"
+rm -fR "$P"
+xdg-open "file:///tmp/report-$uuid/spoonTests/comcastDebug/device/emulator-5554.html" &
+
+exit

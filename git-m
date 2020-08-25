@@ -1,0 +1,11 @@
+#!/bin/bash
+git fetch
+git status
+export branch=bsautner-$(uuidgen)
+export new_branch=bsautner-$(uuidgen)
+echo "created new branch $branch"
+git add .
+git commit -m ""
+git checkout -b $new_branch origin/main
+echo "ready to rock"
+
