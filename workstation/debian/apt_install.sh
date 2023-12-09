@@ -9,3 +9,5 @@ sudo apt install google-chrome-stable chrome-gnome-shell gnome-browser-connector
 sudo apt install nvidia-xconfig cpu-checker qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y
 sudo apt install lutris
 sudo apt install nvidia-driver-libs:i386
+
+sudo apt purge iagno lightsoff four-in-a-row gnome-robots pegsolitaire gnome-2048 hitori gnome-klotski gnome-mines gnome-mahjongg gnome-sudoku quadrapassel swell-foop gnome-tetravex gnome-taquin aisleriot gnome-chess five-or-more gnome-nibbles tali ; sudo apt autoremove
