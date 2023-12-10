@@ -1,3 +1,5 @@
+sudo echo 'deb http://deb.debian.org/debian/ sid main contrib non-free' >> /etc/apt/sources.list
+
 echo deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main | sudo tee /etc/apt/sources.list.d/google-chrome.list
 echo "deb [signed-by=/etc/apt/keyrings/lutris.gpg] https://download.opensuse.org/repositories/home:/strycore/Debian_12/ ./" | sudo tee /etc/apt/sources.list.d/lutris.list > /dev/null
 wget -q -O- https://download.opensuse.org/repositories/home:/strycore/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/keyrings/lutris.gpg > /dev/null
@@ -9,5 +11,6 @@ sudo apt install google-chrome-stable chrome-gnome-shell gnome-browser-connector
 sudo apt install nvidia-xconfig cpu-checker qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y
 sudo apt install lutris
 sudo apt install nvidia-driver-libs:i386
+sudo apt install virtualbox virtualbox-ext-pack
 
 sudo apt purge iagno lightsoff four-in-a-row gnome-robots pegsolitaire gnome-2048 hitori gnome-klotski gnome-mines gnome-mahjongg gnome-sudoku quadrapassel swell-foop gnome-tetravex gnome-taquin aisleriot gnome-chess five-or-more gnome-nibbles tali ; sudo apt autoremove
