@@ -29,3 +29,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo chmod 666 /var/run/docker.sock
 
 sudo apt install nvidia-container-toolkit -y
+sudo nvidia-ctk runtime configure --runtime=docker
+sudo systemctl restart docker
+sudo nvidia-ctk runtime configure --runtime=containerd
+sudo systemctl restart containerd
+sudo nvidia-ctk runtime configure --runtime=crio
+sudo systemctl restart crio
