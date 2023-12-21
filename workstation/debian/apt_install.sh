@@ -21,4 +21,4 @@ sudo apt purge gnome-games
 
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
+sudo chmod 666 /var/run/docker.sock
