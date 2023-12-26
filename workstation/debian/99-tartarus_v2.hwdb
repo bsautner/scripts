@@ -1,0 +1,43 @@
+# This file is to remap the keys on the Razor Tartarus v2
+#
+# Default profile
+#
+evdev:input:b0003v1532p022B*
+#
+# Top row
+ KEYBOARD_KEY_7001e=a
+ KEYBOARD_KEY_7001f=b
+ KEYBOARD_KEY_70020=d
+ KEYBOARD_KEY_70021=e
+ KEYBOARD_KEY_70022=f
+#
+# Second row
+ KEYBOARD_KEY_7002b=g
+ KEYBOARD_KEY_70014=h
+ KEYBOARD_KEY_7001a=i
+ KEYBOARD_KEY_70008=j
+ KEYBOARD_KEY_70015=k
+#
+# Third row
+ KEYBOARD_KEY_70039=l
+ KEYBOARD_KEY_70004=n
+ KEYBOARD_KEY_70016=o
+ KEYBOARD_KEY_70007=p
+ KEYBOARD_KEY_70009=q
+#
+# Fourth row
+ KEYBOARD_KEY_700e1=r
+ KEYBOARD_KEY_7001d=s
+ KEYBOARD_KEY_7001b=t
+ KEYBOARD_KEY_70006=u
+#
+# Thumb button above thumbstick
+ KEYBOARD_KEY_700e2=v
+# Thumbstick
+ KEYBOARD_KEY_70052=w
+ KEYBOARD_KEY_70051=x
+ KEYBOARD_KEY_70050=y
+ KEYBOARD_KEY_7004f=z
+#
+# Thumb button below thumbstick
+ KEYBOARD_KEY_7002c=tab
