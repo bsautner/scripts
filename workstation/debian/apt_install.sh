@@ -18,6 +18,9 @@ apt install nvidia-legacy-390xx-driver firmware-misc-nonfree
 #desktop
 apt install gnome
 
+#secure
+sudo apt-get install gufw
+
 wget -q -O- https://download.opensuse.org/repositories/home:/strycore/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/keyrings/lutris.gpg > /dev/null
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
