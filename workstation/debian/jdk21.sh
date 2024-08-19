@@ -1,5 +1,5 @@
 cd ~
-wget https://download.oracle.com/java/21/latest/jdk-17_linux-x64_bin.tar.gz
+wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz
 sudo mkdir /usr/lib/jvm
 sudo mv ./jdk-17_linux-x64_bin.tar.gz /usr/lib/jvm
 cd /usr/lib/jvm
